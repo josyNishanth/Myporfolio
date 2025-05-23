@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+    :root {
+      --bg-color: #111111;
+      --timeline-frame-color: #1E1E1F;
+      --highlight-color: #FAC24F;
+      --text-color-light: #ffffff;
+      --text-color-dark: #2B2862;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: var(--highlight-color);
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      background: var(--timeline-frame-color);
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      animation: slideIn 1.2s ease-in-out;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: var(--highlight-color);
+      top: 0;
+      bottom: 0;
+      left: 30px;
+    }
+
+    .timeline-item {
+      padding: 20px;
+      position: relative;
+      background: rgba(255, 255, 255, 0.2);
+      width: calc(100% - 60px);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      margin-left: 40px;
+      transform: translateY(50px);
+      opacity: 0;
+      animation: fadeInUp 1s ease-in-out forwards;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: var(--highlight-color);
+      border-radius: 50%;
+      top: 50%;
+      left: -30px;
+      transform: translateY(-50%);
+    }
+
+    .timeline-item h2 {
+      font-size: 18px;
+      color: var(--highlight-color);
+      margin-bottom: 10px;
+    }
+
+    .timeline-item p {
+      font-size: 14px;
+      color: var(--text-color-light);
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin: 30px auto 0;
+      padding: 12px 24px;
+      background: var(--highlight-color);
+      color: var(--text-color-dark);
+      font-size: 16px;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.1);
+      background-color: #ffb347;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        margin-left: 40px;
+        width: calc(100% - 60px);
+      }
+
+      .timeline-item::after {
+        left: -30px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Resume</h1>
+  <div class="timeline">
+    <div class="timeline-item">
+        <style>
+            h2 {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+              position: relative; /* Required for positioning the year correctly */
+            }
+          
+            .location {
+              color: #fb7070;
+            }
+          
+            .year {
+              position: absolute; /* Position the year */
+              right: 0; /* Align the year to the right */
+              top: 100%; /* Push it below "Chennai" */
+              color: rgb(255, 224, 224);
+            }
+          </style>
+          
+          <h2>
+            Education
+            <span class="location">
+              Chennai
+              <span class="year"><p>2021-2025</p></span> <!-- Year aligned to the right under Chennai -->
+            </span>
+          </h2>
+          <h3>Vellore Institute Of Technology</h3>
+          <p>Bachelor of Engineering, Computer Science and Engineering, <b>GPA - 7.5/10</b></p>
+          <p><b>(Head of Photography club, Member of the Telugu Literacy club)</b>
+            Relevant Coursework: Database Management Systems, Operating Systems, Computer Networks, Software Engineering, Compiler Design
+          </p>
+          <br>
+          
+          <style>
+            h3 {
+              display: flex;
+              justify-content: space-between;
+              align-items: center; /* Optional: aligns text vertically */
+              position: relative; /* Required to position the year correctly */
+            }
+          
+            .location {
+              color: #ff7e7e;
+              display: inline-block;
+            }
+          
+            .year {
+              position: absolute;
+              right: 0;
+              top: 100%;
+              color: white;
+              display: inline-block; /* Keep the year in line with Hyderabad */
+              margin-top: 5px; /* Add space between Hyderabad and the year */
+            }
+          </style>
+          
+          <h3>
+            Sri Chaitanya Junior Kalashla
+            <span class="location">Hyderabad</span>
+            <span class="year"><p>2019-2021</p></span>
+          </h3>
+          <p>Intermediate Percentage - <b>78.8%</b></p>
+          <br>
+          
+          
+          
+          <style>
+            h3 {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+              position: relative; /* Required for positioning the year correctly */
+            }
+          
+            .location {
+              color: #ff3131;
+            }
+          
+            .year {
+              position: absolute; /* Position the year */
+              right: 0; /* Align the year to the right */
+              top: 100%; /* Push it below "Hyderabad" */
+              color: rgb(255, 224, 224);
+            }
+          </style>
+          
+          <h3>
+            Delhi Public School, Nacharam
+            <span class="location">
+              Hyderabad
+              <span class="year"><P>2019</P></span> <!-- Year aligned to the right under Hyderabad -->
+            </span>
+          </h3>
+          <p>CBSE Percentage - <b>81.5%</b></p>
+          
+          
+    </div>
+    <style>
+        .timeline-item h2 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; /* Optional: aligns text vertically */
+          position: relative; /* Required to position the location and date correctly */
+        }
+      
+        .location {
+          color: #ff3131; /* Red color for the location */
+          display: inline-block;
+        }
+      
+        .year {
+          position: absolute;
+          right: 0;
+          top: 100%;
+          color: white;
+          display: inline-block;
+          margin-top: 5px; /* Add space between location and the date */
+        }
+      
+        ol {
+          margin-top: 10px;
+          padding-left: 20px;
+        }
+      </style>
+      
+      <div class="timeline-item">
+        <h2>
+          Work Experience
+          <span class="location">Jubilee Hills, Hyderabad</span>
+          <span class="year"><p>Sept 2023 - Dec 2023</p></span>
+        </h2>
+        <h3>S P A Enterprise Info Services (India) Pvt. Ltd.</h3>
+        <p>Frontend Developer Intern</p>
+        <br>
+        <ol>
+          <li>Gained extensive hands-on experience in UI/UX design by using Figma to create detailed wireframes, interactive prototypes, and high-fidelity mockups. This allowed me to understand the end-to-end design process and its importance in delivering seamless user experiences.</li>
+          <li>Enhanced my overall skill set in UI/UX design and web development, combining creativity with technical expertise to build user-focused digital solutions that are practical, innovative, and impactful.</li>
+          <li>My work included designing layouts, managing plugins, and optimising themes to create functional and visually appealing websites tailored to client needs.</li>
+          <li>Tackled real-world design challenges by applying core UI/UX principles in live projects. This helped me develop problem-solving skills, ensuring that interfaces were intuitive and aligned with project goals.</li>
+        </ol>
+      </div>
+      
+      
+      <div class="timeline-item">
+        <h2>Projects</h2>
+        <ul>
+          <li>Portfolio Website</li><Br>
+          <li>Human Finger Mouse (Gesture control, Media pipe, OpenCV)</li><Br>
+          <li>Graphical Password Authentication System Using Intuitive Approach (bcrypt/SHA-256, Flask/Django, OpenCV, TensorFlow/Keras)</li><Br>
+          <li>Image Caption Generator Using Deep Learning (CNN, RNN, LSTM)</li><Br>
+          <li>Hawkeye: AI-Powered Drone Security for Agriculture (Custom CNN, Inception V3, ResNet50, EfficientNetB0, TensorFlow Lite, OpenCV)</li><Br>
+        </ul>
+      </div>
+      
+    <div class="timeline-item">
+      <h2>Skills</h2>
+      <p><B>Technical Skills:</B>   JAVA, C/C++, SQL, FIGMA</p><BR>
+
+        <P><B>Other Skills:</B>   Agile Methodology, Operations Management, Process Planning, Project Management, Product Management</P>
+    
+    </div>
+   
+  </div>
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Download Button</title>
+  <style>
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #fcbf44; /* Highlight color */
+      color: #1b1919; /* Text color */
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, letter-spacing 0.3s ease;
+      animation: color-change 4s linear infinite; /* Added color change animation */
+    }
+
+    /* Keyframes for color change animation */
+    @keyframes color-change {
+      0% { background-color: #FAC24F; }
+      25% { background-color: #ffb347; }
+      50% { background-color: #FFA500; }
+      75% { background-color: #ffb347; }
+      100% { background-color: #FAC24F; }
+    }
+
+    .download-btn:hover {
+      transform: scale(1.3);
+      letter-spacing: 1px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      animation-play-state: paused; 
+    }
+  </style>
+</head>
+<body>
+
+  <a href="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\Sai Nishanth Resume.pdf" class="download-btn" download><h3>Download Resume</h3></a>
+
+</body>
+</html>

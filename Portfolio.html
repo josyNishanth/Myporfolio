@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design</title>
+  <style>
+    /* CSS Resets */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'popins', sans-serif; /* Correct font family with quotes */
+    }
+
+    /* Main Container Styles */
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #111111;
+      padding: 20px; /* Consider removing or adjusting the padding at the main-container level if you have padding within each section */
+    }
+
+    /* Section Styles (apply to all sections) */
+    .section {
+      width: 100%;
+      max-width: 1920px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Header Styles */
+    .header {
+      background-color: #070708;
+      color: white;
+      border-bottom: 1px #1C1C21 solid;
+      width: 100%; /* Ensure header spans the full width */
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 40px;
+      border-left: 1px #1C1C21 solid;
+      border-right: 1px #1C1C21 solid;
+      width: 100%;
+      max-width: 1920px; /* Limit width to match the maximum width of sections */
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 500;
+      color: white;
+    }
+
+    .navigation {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-item {
+      padding: 16px 24px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      color: #AFB0B6;
+      border-radius: 10px;
+      border: 1px #2F2F37 solid;
+      background-color: #1C1C21;
+      cursor: pointer; /* Add cursor pointer for better UX */
+      transition: background-color 0.3s, color 0.3s; /* Add transition for hover effect */
+    }
+
+    .nav-item:hover {
+        background-color: #2F2F37;
+        color: white;
+    }
+
+    .nav-item-active {
+      color: white;
+      background-color: #131316;
+    }
+
+    /* New Navbar Styles */
+    nav {
+      background-color: #131316;
+      width: 100%;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #AFB0B6;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #37372f;
+      color: white;
+    }
+
+    /* About Section Styles */
+    .about {
+      background-color: #070708;
+      color: white;
+      padding: 80px 20px; /* Add padding to the about section */
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      max-width: 1920px;
+      width: 100%;
+    }
+
+    .about-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .about-title {
+      font-size: 58px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .about-description {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .navigation {
+        gap: 10px;
+        justify-content: flex-start;
+        margin-top: 20px;
+        width: 100%; 
+      }
+
+      .nav-item {
+        font-size: 16px;
+      }
+
+      .about-content {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .about-title {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .about-description {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .about-content img {
+        width: 100%; 
+        height: auto; 
+        max-height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+
+    <div class="section header">
+        <div class="header-content" style="display: flex; justify-content: center; align-items: center;">
+            <div class="logo">
+                <div class="logo-text" style="color: #FAC24F;"><h2>My Portfolio</h2></div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- New Navbar -->
+     <html>
+     <body>
+    <nav>
+      <ul>
+        <li><a href="fashiongallery.html"><span>Fashion Photography</span></a></li>
+        <li><a href="portraitgallery.html"><span>Portrait Photography</span></a></li>
+        <li><a href="weddinggallery.html"><span>Wedding Photography</span></a></li>
+        <li><a href="gallery.html"><span>Automobile Photography</span></a></li>
+      </ul>
+    </nav>
+    <section id="fashion">
+      </section>
+    
+    <section id="portrait">
+      </section>
+    
+    </section>
+    <section id="Drone">
+      </section>
+    
+    <section id="wedding">
+      </section>
+    
+    </section>
+    <section id="Automobile">
+      </section>
+    
+    </section>
+<style>
+  html{
+    scroll-behavior: smooth;
+    scroll-padding: 10rem;
+  }
+</style>
+   
+    </body>
+    </html>
+
+
+    <div class="section about">
+      <div class="about-content">
+        <div class="about-text">
+          <div class="about-title">Hello!</div>
+          <div class="about-description">
+            My journey as a photographer has been a lifelong quest to capture the extraordinary in the ordinary, to freeze fleeting moments in time, and to share the world's beauty as I see it. Based in the vibrant city of Hyderabad, India, I have a passion for travel and exploration, always seeking new perspectives and experiences to capture through my lens. I love filming myself as I journey through the world, creating a visual diary of my adventures. Every photograph I take is a precious memory, a piece of the past that shapes my ongoing story.
+          </div>
+        </div>
+        <img style="flex: 1 1 0; max-height: 575px; object-fit: cover; border-radius: 30px;" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\20241010_103256.jpg">
+
+      </div>
+    </div>
+
+  </div>
+
+      <!-- new tab -->
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Section</title>
+  <style>
+    /* General Section Styling */
+    .portfolio-section {
+      background-color: #070708;
+      color: white;
+      padding: 50px;
+      font-family: Manrope, sans-serif;
+    }
+
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid #1C1C21;
+      padding-bottom: 20px;
+      margin-bottom: 50px;
+    }
+
+    .portfolio-title {
+      max-width: 50%;
+    }
+
+    .portfolio-category {
+      color: #797C86;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .portfolio-description {
+      color: white;
+      font-size: 58px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .portfolio-controls {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+
+
+
+    /* View All Works Button */
+    .view-all-works-btn {
+      background: #1C1C21;
+      border: 1px solid #2F2F37;
+      padding: 16px 24px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    /* Portfolio Gallery */
+    .portfolio-gallery {
+      display: flex;
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .portfolio-image {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;    
+    }
+
+    .portfolio-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .portfolio-name {
+      color: #CACACE;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .portfolio-date {
+      color: #797C86;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .view-project {
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      border-bottom: 1px solid #2F2F37;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="portfolio-section">
+    <div class="portfolio-header">
+      <div class="portfolio-title">
+        <div class="portfolio-category">Portfolio</div>
+        <div class="portfolio-description">Explore My Photography Work.</div>
+      </div>
+      <div class="portfolio-controls">
+        <div class="arrow-buttons">
+          <div class="arrow-button">
+            <div class="arrow left-arrow"></div>
+          </div>
+          <div class="arrow-button">
+            <div class="arrow right-arrow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portfolio Gallery</title>
+      <style>
+        /* Basic styles for the portfolio gallery */
+        .portfolio-gallery {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+        }
+    
+        .portfolio-item {
+          position: relative;
+          overflow: hidden;
+          width: 499px;
+          height: 519px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        .portfolio-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+    
+        .portfolio-info {
+          position: absolute;
+          bottom: -100%;
+          left: 0;
+          width: 100%;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          transition: bottom 0.5s ease;
+        }
+    
+        .portfolio-name {
+          font-size: 24px;
+          font-weight: bold;
+        }
+    
+        .portfolio-date {
+          font-size: 16px;
+          margin-top: 5px;
+        }
+    
+        .view-project {
+          font-size: 18px;
+          margin-top: 10px;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+    
+        /* Hover effect for sliding animation */
+        .portfolio-item:hover .portfolio-info {
+          bottom: 0;
+        }
+    
+        .portfolio-item:hover .portfolio-image {
+          transform: scale(1.1);
+        }
+    
+        /* Animation delay for each item */
+        .portfolio-item:nth-child(1) {
+          animation: slideIn 0.8s ease 0.4s forwards;
+        }
+        .portfolio-item:nth-child(2) {
+          animation: slideIn 0.8s ease 0.8s forwards;
+        }
+        .portfolio-item:nth-child(3) {
+          animation: slideIn 0.8s ease 1.2s forwards;
+        }
+        .portfolio-item:nth-child(4) {
+          animation: slideIn 0.8s ease 1.6s forwards;
+        }
+        .portfolio-item:nth-child(5) {
+          animation: slideIn 0.8s ease 2s forwards;
+        }
+        .portfolio-item:nth-child(6) {
+          animation: slideIn 0.8s ease 2.4s forwards;
+        }
+        .portfolio-item:nth-child(7) {
+          animation: slideIn 0.8s ease 2.8s forwards;
+        }
+    
+        /* Keyframes for sliding animation */
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="portfolio-gallery">
+        <div class="portfolio-item">
+          <img src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\IMG_1303.jpg" alt="Portfolio 1" class="portfolio-image" />
+          <div class="portfolio-info">
+            <div class="portfolio-name">Faces of Resilience</div>
+            <div class="portfolio-date">March 2022</div>
+            <div class="view-project">View Project</div>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\IMG_0011.jpg" alt="Portfolio 2" class="portfolio-image" />
+          <div class="portfolio-info">
+            <div class="portfolio-name">A Wedding Tale</div>
+            <div class="portfolio-date">January 2020</div>
+            <div class="view-project">View Project</div>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\20221115235226_IMG_5325_edited.jpg" alt="Portfolio 3" class="portfolio-image" ; />
+          <div class="portfolio-info">
+            <div class="portfolio-name">Fashion Elegance</div>
+            <div class="portfolio-date">January 2020</div>
+            <div class="view-project">View Project</div>
+          </div>
+        </div>
+<!-- new tabs Fashion photography -->
+ <html>
+  <body>
+<br>  <br>
+<div style="width: 1596px; height: 764px; padding-top: 80px; border-top: 1px #1C1C21 solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 50px; display: inline-flex"> 
+  <div style="align-self: stretch; justify-content: space-between; align-items: center; gap: 50px; display: flex">
+    <div style="flex: 1 1 0; color: #797C86; font-size: 44px; font-family: Manrope; font-weight: 600; text-transform: uppercase; word-wrap: break-word">Fashion Photography</div>
+
+    <button id="fashiongallery" style="
+    background: #1C1C21; 
+    border: 1px solid #2F2F37; 
+    padding: 16px 24px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    font-weight: 500; 
+    color: white; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center; 
+    line-height: 1; 
+    transition: all 0.5s ease;
+  " 
+  onmouseover="this.style.color='#001F3F'; this.style.backgroundColor='#fff'; this.style.border='3px solid white';" 
+  onmouseout="this.style.color='white'; this.style.backgroundColor='#1C1C21'; this.style.border='1px solid #2F2F37';">
+    View All Works →
+  </button>
+  <script>
+    document.getElementById('fashiongallery').addEventListener('click', function() {
+    // Replace this with your actual gallery opening logic
+    window.location.href = 'fashiongallery.html'; 
+});
+  </script>
+  
+    
+    
+  </div>
+  
+  <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 50px; display: inline-flex">
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style="max-width: 100%;
+  height: auto;align-self: stretch; height: 600px; border-radius: 20px" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\fashion\20230705164606_IMG_6184.jpg" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word"></div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style=" max-width: 100%;
+  height: auto;align-self: stretch; height: 600px; border-radius: 20px" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\fashion\IMG_6504.jpg"/>
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word"></div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style=" max-width: 100%;
+  height: auto;align-self: stretch; height: 600px; border-radius: 20px" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\fashion\DSC01214.jpg" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word"></div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- new tabs portrait photography -->
+<br>  <br>
+<div style="width: 1596px; height: 764px; padding-top: 80px; border-top: 1px #1C1C21 solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 50px; display: inline-flex"> 
+  <div style="align-self: stretch; justify-content: space-between; align-items: center; gap: 50px; display: flex">
+    <div style="flex: 1 1 0; color: #797C86; font-size: 44px; font-family: Manrope; font-weight: 600; text-transform: uppercase; word-wrap: break-word">Portrait Photography</div>
+
+    <button id="portraitgallery" style="
+    background: #1C1C21; 
+    border: 1px solid #2F2F37; 
+    padding: 16px 24px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    font-weight: 500; 
+    color: white; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center; 
+    line-height: 1; 
+    transition: all 0.5s ease;
+  " 
+  onmouseover="this.style.color='#001F3F'; this.style.backgroundColor='#fff'; this.style.border='3px solid white';" 
+  onmouseout="this.style.color='white'; this.style.backgroundColor='#1C1C21'; this.style.border='1px solid #2F2F37';">
+    View All Works →
+  </button>
+  <script>
+    document.getElementById('portraitgallery').addEventListener('click', function() {
+    // Replace this with your actual gallery opening logic
+    window.location.href = 'portraitgallery.html'; 
+});
+  </script>
+  
+    
+    
+  </div>
+  
+  <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 50px; display: inline-flex">
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style=" max-width: 100%;
+  height: auto;align-self: stretch; height: 600px; border-radius: 20px" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\IMG_6473.jpg" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word"></div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style=" max-width: 100%;
+  height: auto;align-self: stretch; height: 600px; border-radius: 20px" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\IMG_6402.jpg" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word"></div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style=" max-width: 100%;
+  height: auto;align-self: stretch; height: 600px; border-radius: 20px" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\IMG_6475.jpg" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word"></div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- new tabs Wedding photography -->
+<br>  <br>
+<div style="width: 1596px; height: 764px; padding-top: 80px; border-top: 1px #1C1C21 solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 50px; display: inline-flex"> 
+  <div style="align-self: stretch; justify-content: space-between; align-items: center; gap: 50px; display: flex">
+    <div style="flex: 1 1 0; color: #797C86; font-size: 44px; font-family: Manrope; font-weight: 600; text-transform: uppercase; word-wrap: break-word">Wedding Photography</div>
+
+    <button id="weddinggallery" style="
+    background: #1C1C21; 
+    border: 1px solid #2F2F37; 
+    padding: 16px 24px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    font-weight: 500; 
+    color: white; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center; 
+    line-height: 1; 
+    transition: all 0.5s ease;
+  " 
+  onmouseover="this.style.color='#001F3F'; this.style.backgroundColor='#fff'; this.style.border='3px solid white';" 
+  onmouseout="this.style.color='white'; this.style.backgroundColor='#1C1C21'; this.style.border='1px solid #2F2F37';">
+    View All Works →
+  </button>
+
+  <script>
+  document.getElementById('weddinggallery').addEventListener('click', function() {
+    // Replace this with your actual gallery opening logic
+    window.location.href = 'weddinggallery.html'; 
+});
+</script>
+  
+  
+    
+    
+  </div>
+  
+  <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 50px; display: inline-flex">
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style=" max-width: 100%;
+  height: auto;align-self: stretch; height: 519px; border-radius: 20px" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\wedding\IMG_7248.jpg" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word"></div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style="max-width: 100%;
+  height: auto;align-self: stretch; height: 519px; border-radius: 20px" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\wedding\IMG_0351.jpg" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word"></div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style="max-width: 100%;
+  height: auto;align-self: stretch; height: 519px; border-radius: 20px" src="C:\Users\josyu\OneDrive\Desktop\Nishanth portfolio\assets\images\wedding\IMG_0185.jpg" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word"></div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- new tabs Automobile photography -->
+<br>  <br>
+<div style="width: 1596px; height: 764px; padding-top: 80px; border-top: 1px #1C1C21 solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 50px; display: inline-flex"> 
+  <div style="align-self: stretch; justify-content: space-between; align-items: center; gap: 50px; display: flex">
+    <div style="flex: 1 1 0; color: #797C86; font-size: 44px; font-family: Manrope; font-weight: 600; text-transform: uppercase; word-wrap: break-word">Automobile Photography</div>
+
+    <button id="galleryButton" style="
+    background: #1C1C21; 
+    border: 1px solid #2F2F37; 
+    padding: 16px 24px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    font-weight: 500; 
+    color: white; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center; 
+    line-height: 1; 
+    transition: all 0.5s ease;
+  " 
+  onmouseover="this.style.color='#001F3F'; this.style.backgroundColor='#fff'; this.style.border='3px solid white';" 
+  onmouseout="this.style.color='white'; this.style.backgroundColor='#1C1C21'; this.style.border='1px solid #2F2F37';">
+    View All Works →
+
+  </button>
+  <script>
+    document.getElementById('galleryButton').addEventListener('click', function() {
+    window.location.href = 'gallery.html';
+});
+</script>
+  
+  </div>
+  
+  <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 50px; display: inline-flex">
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style="align-self: stretch; height: 519px; border-radius: 20px" src="https://via.placeholder.com/412x911" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word">Faces of Resilience</div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style="align-self: stretch; height: 519px; border-radius: 20px" src="https://via.placeholder.com/412x911" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word">Innocence Unveiled</div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 19px; display: inline-flex">
+      <img style="align-self: stretch; height: 519px; border-radius: 20px" src="https://via.placeholder.com/412x911" />
+      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+          <div style="align-self: stretch; color: #CACACE; font-size: 20px; font-family: Manrope; font-weight: 500; word-wrap: break-word">Elegance in Monochrom</div>
+        </div>
+        <div style="padding-top: 6px; padding-bottom: 6px; border-bottom: 1px #2F2F37 solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div style="width: 24px; height: 24px; position: relative"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
